@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import Home from "./pages/Home";
 import { getLists } from "./redux/features/list.slice";
 
 function App() {
@@ -10,8 +11,8 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <h2>Rayda</h2>
+    <div className="bg-[#FCFCFD]">
+      <Home />
     </div>
   );
 }

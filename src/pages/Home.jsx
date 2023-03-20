@@ -1,9 +1,10 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 function Home() {
   return (
-    <div className="">
-      <h2>Home</h2>
+    <div className="w-[96%] mx-auto bg-[#FCFCFD]">
+      <Navbar />
     </div>
   );
 }
