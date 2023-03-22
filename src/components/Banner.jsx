@@ -8,7 +8,7 @@ import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 
 function Banner() {
   return (
-    <Card className="p-4 w-[96%]">
+    <Card className="p-4  mx-auto">
       <CardMedia
         component="img"
         className="rounded-[10px] h-[150px] lg:h-auto"
