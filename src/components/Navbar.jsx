@@ -3,7 +3,7 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 
 function Navbar() {
   return (
-    <div className="flex w-[98%] md:w-full mx-auto justify-between items-center py-4 px-2 ">
+    <div className="flex w-[98%] md:w-full mx-auto justify-between items-center py-4  ">
       <div>
         <h3 className="text-[#101828]">Welcome</h3>
         <p className="-mt-4 text-[.9rem] text-[#475467]">

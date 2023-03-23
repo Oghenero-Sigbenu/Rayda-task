@@ -3,37 +3,36 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import Logo from "../assests/task-logo.png";
 
-function Cards() {
+function Cards({ item }) {
   return (
-    <Card className=" w-[98%] md:w-[47%] lg:w-[22.5%] p-2">
+    <Card className=" w-[98%] md:w-[47%] lg:w-[22.5%] p-2 mb-6">
       <CardContent className=" mx-auto bg-[#F2F4F7]">
         <CardMedia
           component="img"
-          alt="green iguana"
+          alt="product name"
           sx={{ width: 100 }}
           className="mx-auto "
-          src={Logo}
+          src={item?.image}
         />
       </CardContent>
       <CardContent className="flex">
         <Typography
           gutterBottom
           variant="p"
-          className="rounded-[50%] bg-[#F2F4F7] w-5 h-5 p-2 text-[#475467] "
+          className="rounded-[50%] bg-[#F2F4F7] font-medium w-5 h-5 p-2 text-[#475467] "
           component="div"
           mr={1}
           ml={-2}
         >
-          LR
+          {item?.name?.split(" ")[0][0] + item?.name?.split(" ")[1][0]}
         </Typography>
         <Typography
           variant="p"
           component="div"
           className="font-semibold  py-2 text-[#475467]"
         >
-          Lorem Rita
+          {item?.name}
         </Typography>
         <Typography
           variant="p"
@@ -47,11 +46,13 @@ function Cards() {
         <Typography
           gutterBottom
           ml={-2}
+          mb={4}
           variant="p"
-          className="font-semibold   text-[#475467] "
+          className="font-semibold   text-[#101828] "
           component="div"
         >
-          Modern Office Table Desk Computer Table Furniture ....
+          {" "}
+          {item?.title}
         </Typography>
         <Typography
           gutterBottom
@@ -61,7 +62,7 @@ function Cards() {
           ml={-2}
           mt={2}
         >
-          Current Bid: <strong>#345,890</strong>
+          Current Bid: <strong className="text-[#101828]">{item?.bid}</strong>
         </Typography>
       </CardContent>
       <hr></hr>

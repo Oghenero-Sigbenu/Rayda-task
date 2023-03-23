@@ -3,8 +3,12 @@ import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Cards from "./Cards";
+import { useGetListQuery } from "../redux/service/listApi";
 
 function ProductCards() {
+  const { data, error, isLoading } = useGetListQuery();
+
+  console.log(data, error, isLoading);
   return (
     <Card className="p-4 mt-[3rem] mx-auto">
       <CardContent className="flex justify-between ">
@@ -16,11 +20,8 @@ function ProductCards() {
         </button>
       </CardContent>
       <hr></hr>
-      <CardContent className="flex justify-between">
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
+      <CardContent className="flex justify-between flex-wrap">
+        {data && data?.data?.map((item, i) => <Cards item={item} key={i} />)}
       </CardContent>
     </Card>
   );
